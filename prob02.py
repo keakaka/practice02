@@ -11,8 +11,6 @@ s = """
     </body>
 </html>"""
 
-# print(re.sub('<*?>'))
-
-print(re.sub('<.*?>', '', s, 0, re.I|re.S))
+print(re.sub('<.*?>', '', s, 0))
 
 
