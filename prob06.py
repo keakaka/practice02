@@ -7,29 +7,33 @@
 
 import random, sys
 
-min, max = 1, 100
-num = random.randrange(max) + min
+num = random.randrange(100) + 1
 print('수를 결정하였습니다. 맞춰보세요 \n1-100')
 count = 1
 
 while True:
     check = input((str(count) + '>> '))
+    count += 1
     if check.isdigit():
         check = int(check)
         if num > check:
             print('더 높게')
+            continue
         elif num < check:
             print('더 낮게')
+            continue
         else:
             print('맞았습니다.')
             retry = input('다시 하시겠습니까? (Y/N) ').upper()
             if retry == 'N':
                 sys.exit(0)
-            else:
+            elif retry == 'Y':
                 count = 1
-                num = random.randrange(max) + min
+                num = random.randrange(100) + 1
                 continue
+            else:
+                print('잘못 입력하셨습니다. 게임을 종료합니다.')
+                sys.exit(0)
     else:
         print('숫자만 입력하세요')
         continue
-    count += 1

@@ -7,4 +7,4 @@ def mysum(*num):
 
     print(result)
 
-mysum(1, 5, 9)
+mysum(1, 2, 3, 100)

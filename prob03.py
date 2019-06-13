@@ -7,7 +7,7 @@ import re
 s = """We encourage everyone to contribute to Python. If you still have questions after reviewing the material
 in this guide, then the Python Mentors group is available to help guide new contributors through the process."""
 
-s = set(re.sub('[,.\n]', '', s, 0).upper().split())
+s = set(re.sub('[,.\n]', '', s, 0).upper().split(' '))
 l = list(s)
 l.sort()
 for i in l:
