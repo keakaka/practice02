@@ -18,10 +18,8 @@ while True:
         check = int(check)
         if num > check:
             print('더 높게')
-            continue
         elif num < check:
             print('더 낮게')
-            continue
         else:
             print('맞았습니다.')
             retry = input('다시 하시겠습니까? (Y/N) ').upper()
